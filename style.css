@@ -1,0 +1,121 @@
+:root { 
+    --bg-main: #f7fafc; 
+    --navy-dark: #1a202c; 
+    --border-color: #e2e8f0; 
+} 
+ 
+body { 
+    font-family: 'Segoe UI', Roboto, sans-serif; 
+    background-color: var(--bg-main); 
+    margin: 0; 
+    padding: 20px; 
+    color: #2d3748; 
+} 
+ 
+.dashboard-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+} 
+ 
+header { 
+    background: linear-gradient(135deg, #2b6cb0 0%, #1a365d 100%); 
+    color: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+     margin-bottom: 25px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+} 
+ 
+header h1 { margin: 0; font-size: 1.8rem; letter-spacing: 1px; } 
+header p { margin: 5px 0 0 0; opacity: 0.8; font-size: 0.9rem; } 
+ 
+/* Stats Grid */ 
+.stats-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    margin-bottom: 25px; 
+} 
+ 
+.stat-card { 
+    background: white; 
+    padding: 15px 20px; 
+    border-radius: 8px; 
+    border: 1px solid var(--border-color); 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02); 
+} 
+ 
+.stat-card h3 { margin: 0; font-size: 0.85rem; color: #718096; text-transform: uppercase; 
+}.stat-number { margin: 5px 0 0 0; font-size: 1.6rem; font-weight: bold; color: 
+var(--navy-dark); } 
+ 
+/* Layout Grid Split */ 
+.main-layout { 
+    display: grid; 
+    grid-template-columns: 7fr 5fr; 
+    gap: 25px; 
+} 
+ 
+.styled-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: white; 
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02); 
+    margin-bottom: 15px; 
+    border: 1px solid var(--border-color); 
+} 
+ 
+.styled-table th { background: #4a5568; color: white; padding: 10px; font-size: 0.9rem; } 
+.styled-table td { padding: 12px 10px; border-bottom: 1px solid var(--border-color); 
+text-align: center; font-size: 0.9rem; } 
+ 
+/* Badges & Buttons */ 
+.badge { padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; } 
+.bg-success { background: #c6f6d5; color: #22543d; } 
+.bg-danger { background: #fed7d7; color: #742a2a; } 
+ 
+.btn { padding: 6px 12px; border: none; border-radius: 4px; font-weight: bold; cursor: 
+pointer; font-size: 0.75rem; } 
+.btn-primary { background: #3182ce; color: white; margin-right: 3px;} 
+.btn-warning { background: #dd6b20; color: white; } 
+.btn-sm { padding: 5px 8px; } 
+.btn:hover { opacity: 0.9; } 
+ 
+/* Terminal Console UI Styling */ 
+.terminal-box { 
+    background: #1e1e1e; 
+    border-radius: 8px; 
+    color: #bae6fd; 
+    font-family: 'Courier New', Courier, monospace; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+    overflow: hidden; 
+} 
+ 
+.terminal-header { 
+    background: #333; 
+    padding: 8px 12px; 
+    display: flex;
+    align-items: center; 
+} 
+.dot { width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; display: 
+inline-block; } 
+.red { background: #ef4444; } .yellow { background: #f59e0b; } .green { background: 
+#10b981; } 
+.terminal-title { color: #9ca3af; font-size: 0.75rem; margin-left: 10px; } 
+.terminal-body { padding: 15px; height: 350px; overflow-y: auto; display: flex; 
+flex-direction: column; } 
+.log-line { margin: 4px 0; font-size: 0.85rem; line-height: 1.4; } 
+.log-time { color: #6b7280; margin-right: 5px; } 
+.log-cmd { color: #f8fafc; } 
+/* Log Status Badge Warna di Terminal */ 
+.log-status { float: right; font-size: 0.75rem; font-weight: bold; padding: 1px 4px; 
+border-radius: 3px; } 
+.log-status.begin { color: #38bdf8; } 
+.log-status.commit { color: #4ade80; } 
+.log-status.rollback { color: #f87171; } 
+.log-status.savepoint { color: #fbbf24; } 
+.log-status.partial_rollback { color: #fb923c; } 
+.log-status.running { color: #94a3b8; } 
+.terminal-hint { font-size: 0.75rem; color: #718096; margin-top: 8px; line-height: 1.4; }
